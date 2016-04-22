@@ -1,4 +1,4 @@
-class Server < ActiveRecord::Base
+class Manager < ActiveRecord::Base
 
   has_secure_password
 

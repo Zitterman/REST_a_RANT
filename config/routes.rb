@@ -7,6 +7,15 @@ Rails.application.routes.draw do
   resources :orders
   resources :managers
   resources :menu_items
+  # resources :sessions, only: [:create, :destroy]
+  post '/sessions' => 'sessions#create'
+  delete 'sessions' => 'sessions#destroy'
+
+  get '/servers/profile' => 'servers#profile', as: :server_profile
+  get '/servers/log_in' => 'servers#log_in', as: :server_log_in
+
+  get '/managers/profile' => 'managers#profile', as: :manager_profile
+  get '/managers/log_in' => 'managers#log_in', as: :manager_log_in
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
