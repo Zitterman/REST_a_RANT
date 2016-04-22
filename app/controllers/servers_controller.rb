@@ -25,6 +25,7 @@ class ServersController < ApplicationController
   end
 
   def log_in
+
   end
 
   private
